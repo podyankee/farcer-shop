@@ -1,0 +1,90 @@
+.s-banner
+	padding-bottom: 0
+.banner
+	background-image: linear-gradient(235deg, #ffb800, #ff6d00)
+	height: 300px
+	padding: 0 90px
+	position: relative
+	border-radius: 4px
+.banner__navigation
+	+square(30px)
+	display: flex
+	align-items: center
+	background-color: rgba($white, 0.2)
+	border-radius: 50%
+	cursor: pointer
+	justify-content: center
+	position: absolute
+	margin-top: -25px
+	top: 50%
+	transition: all linear 0.3s
+	&.banner__navigation
+		&--prev
+			left: 30px
+		&--next
+			right: 30px
+	&:hover
+		background-color: rgba($white, 0.5)
+		.banner__navigation-icon
+			fill: rgba($black, 0.5)
+
+	&-icon
+		fill: rgba($black, 0.5)
+		+dem(10px, 17px)
+		transition: all linear 0.3s
+
+.banner__img-wrapper
+		+square(250px)
+.banner__img
+	width: 100%
+	max-width: 250px
+	height: auto
+
+.banner__item
+	padding-top: 30px
+	padding-bottom: 30px
+	outline: none
+.banner__content
+	+row-flex
+.banner__img-wrapper
+	+col
+	+size(10)
+	text-align: center
+.banner__body
+	+col
+	+size(14)
+.banner__body
+	color: $white
+.banner
+	&__title
+		font-size: 50px
+		line-height: 1
+		margin-bottom: 15px
+		display: block
+	&__descr
+		display: block
+		font-size: 18px
+		line-height: 1.67
+		margin-bottom: 40px
+	&__dot
+		+square(8px)
+		border-radius: 50%
+		background-color: rgba(38,38,38,0.3)
+		display: block
+		cursor: pointer
+	&__dots
+		position: absolute
+		bottom: 20px
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 2
+		.slick-dots
+			display: flex
+			align-items: center
+			li
+				margin-right: 10px
+				&:last-child
+					margin-right: 0
+				&.slick-active
+					.banner__dot
+						background-color: $white

@@ -1,0 +1,44 @@
+include _mixins
+
+header.header
+	.header__top
+		.container
+			.header__content
+				nav.header__nav.header-nav
+					ul.header-nav__list
+						+headerNavLink("", 'О компании')
+						+headerNavLink("", 'Доставка и оплата')
+						+headerNavLink("", 'Акции')
+						+headerNavLink("", 'Оптовикам')
+						+headerNavLink("", 'Новости')
+						+headerNavLink("", 'Гарантии')
+						+headerNavLink("", 'Контакты')
+				nav.header__nav.header__nav--right.header-nav
+					ul.header-nav__list
+						+headerNavLink("", 'Регистрация')
+						+headerNavLink("", 'Вход')
+	.header__main
+		.container
+			.header__content
+				.header__logo.logo
+					img(src="assets/img/general/logo.png", alt="Логотип").logo-img
+				.header__phones
+					.header__item.header__item--mobile
+						a(href="tel:8800880880").header__phone 8 (800) 880880
+						a(href="#").header__link Заказать звоннок
+					.header__item.header__item--mobile-hide
+						a(href="tel:8800770770").header__phone 8 (800) 770770
+						span(href="#").header__description Звоннок бесплатный
+				.header__address.header-address
+					+icon('location', 'header-address__icon')
+					span.header-address__text Лондон, авеню Черчилля, 11 к. 2, павильен 2
+				.header__shop
+					.header-goods
+						span.header-goods__price 0 &#8372;
+						span.header-goods__count 0 товаров
+					.header-basket
+						+icon('shopping-cart', 'header-basket__icon')
+						span.header-basket__text Корзина
+	include ../elements/_header-nav
+	include ../elements/_header-mobile
+	

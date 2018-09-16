@@ -1,0 +1,45 @@
+section.s-information.s-lightbg
+	.container
+		.information
+			.information-item
+				.information-item__header
+					h2.title__section Новости
+				.information-item__body
+					.news__prev-wrapper
+						a(href="#").news-prev
+							.news-prev__img(style="background-image: url(assets/img/general/new.jpg)")
+							.news-prev__body
+								span.news-prev__title Выставка в Германии
+								span.news-prev__date 20 августа 2018
+						a(href="#").news-prev
+							.news-prev__img(style="background-image: url(assets/img/general/show.jpg)")
+							.news-prev__body
+								span.news-prev__title Новинки в нашем магазине
+								span.news-prev__date 21 августа 2018
+				.information-item__footer
+					a(href="#").information-item__link Все новости
+			.information-item
+				.information-item__header
+					h2.title__section Отзывы
+				.information-item__body
+					.review-prev
+						p.review-prev__text У вас покупали велосипед и снегокат для сына. Хороший у вас ассортимент и цены приемлемые, есть товары разных категорий, можно что-то подешевле подобрать и, напротив, что-то дорогое и редкое найти. Также хочется отметить хорошее клиентское обслуживание, с менеджерами!
+						span.review-prev__author Елена В.
+				.information-item__footer
+					a(href="#").information-item__link Все отзывы
+			.information-item
+				.information-item__header
+					h2.title__section Бренды
+				.information-item__body
+					.brands__wrapper
+						ul.brands__list.brands__list--small
+							each brand in [{img:'puky', name:'PUKY'}, {img:'strider', name:'Strider'}, {img:'merida', name:'Merida'}, {img:'scool', name:'Scool'},{img:'micro', name:'Micro'}, {img:'stiga', name:'STIGA'}]
+								li.brands__item
+									a(href="#").brand
+										img(src=`assets/img/general/brands/${brand.img}.png`).brand__img
+										span.brand__name=brand.name
+				.information-item__footer
+					a(href="#").information-item__link Все бренды
+					span.information-item__count (9)
+
+				

@@ -1,0 +1,32 @@
+include ../common/_mixins
+.header__menu
+	.container
+		.header__content
+			nav.header__main-nav.main-nav
+				ul.main-nav__list
+					li.main-nav__item
+						a(href="#").main-nav__link Самокаты
+						include _main-nav__dropdown
+					li.main-nav__item
+						a(href="#").main-nav__link Беговелы
+					li.main-nav__item
+						a(href="#").main-nav__link Велосипеды
+					li.main-nav__item
+						a(href="#").main-nav__link Ролики
+					li.main-nav__item
+						a(href="#").main-nav__link Скейты
+					li.main-nav__item
+						a(href="#").main-nav__link Батуты
+					li.main-nav__item
+						a(href="#").main-nav__link Аксессуары и запчасти
+					li.main-nav__item
+						a(href="#").main-nav__link Еще
+			.header__search.search
+				+icon('search', 'search__icon')
+				.search__body
+					form.search__form
+						.search__input-wrapper
+							input(placeholder='Я хочу купить...').search__input
+							.search__clear
+								+icon('cancel', 'search__clear-icon')
+						input(type='submit' value="Найти").search__btn

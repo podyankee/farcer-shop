@@ -1,0 +1,80 @@
+.information
+	+row-flex
+	&__footer
+		display: flex
+		& > *
+			margin-right: 5px
+			&:last-child
+				margin-right: 0
+.information-item
+	+col
+	+size(8)
+	&__link
+		border-bottom: 1px solid rgba(38, 38, 38, 0.15)
+		color: $mine-shaft
+		display: inline-block
+	&__count
+		color: $chelsea-cucumber
+	&__body
+		height: 250px
+.information-item__link
+	margin-right: 10px
+
+.news-prev
+	display: flex
+	align-items: flex-start
+	color: $mine-shaft
+	margin-bottom: 40px
+	&:last-child
+		margin-bottom: 0
+	&__img
+		+square(80px)
+		background-size: cover
+		border-radius: 4px
+		flex-shrink: 0
+		margin-right: 20px
+	&__title
+		display: block
+		margin-bottom: 10px
+	&__date
+		color: $oslo-gray
+		+rem(12px)
+
+.review-prev
+	&__text
+		line-height: 1.79
+		margin-bottom: 15px
+	&__author
+		background-color: $white
+		border-radius: 20px
+		color: $oslo-gray
+		display: inline-block
+		+rem(12px)
+		height: 20px
+		line-height: 18px
+		border: 1px solid rgba(38, 38, 38, 0.15)
+		padding: 0 15px
+.brands__list
+	display: flex
+	flex-wrap: wrap
+	& > *
+		margin-right: 10px
+		margin-bottom: 10px
+		&:nth-child(6n + 6)
+			margin-right: 0
+	&.brands__list--small
+		& > *
+			&:nth-child(3n + 3)
+				margin-right: 0
+.brand
+	display: flex
+	align-items: center
+	flex-direction: column
+	color: $mine-shaft
+.brand__img
+	+dem(110px, 80px)
+	margin-bottom: 5px
+	width: 110px
+	transition: all linear 0.3s
+	&:hover
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1), 0 2px 5px 0 rgba(0,0,0,0.05)

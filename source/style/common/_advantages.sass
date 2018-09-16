@@ -1,0 +1,32 @@
+.advantages
+	+row-flex
+	align-items: center
+	background-color: $parcelain
+	padding-top: 20px
+	padding-bottom: 20px
+	border-radius: 4px
+	margin-right: 0
+	margin-left: 0
+	+md(padding, 20px 40px)
+.advantage
+	+col
+	+size(8)
+	display: flex
+	align-items: center
+	+md(flex-direction, column)
+	+md(text-align, center)
+	&__body
+		display: flex
+		flex-direction: column
+	&__icon
+		+square(50px)
+		fill: $dusty-gray
+		margin-right: 20px
+		+md(margin-right, 0)
+		+md(margin-bottom, 15px)
+	&__title
+		+rem(18px)
+		margin-bottom: 10px
+	&__descr
+		+rem(12px)
+		color: $mid-gray

@@ -1,0 +1,122 @@
+html
+	height: 100%
+	font-size: 14px
+	
+	body
+		font-family: $default-font
+		font-size: 14px
+		height: 100%
+		color: $mine-shaft
+
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+
+ul, li
+	list-style-type: none
+	margin: 0
+	padding: 0
+a
+	text-decoration: none
+
+p
+	margin: 0
+
+input, select, button
+	outline: none
+
+*, *:before, *:after
+	box-sizing: border-box
+
+.content
+	flex: 1 9 auto
+.container
+	+wrapper
+	
+.search
+	&__icon
+		+square(20px)
+		fill: $blaze-orange
+.btn
+	height: 40px
+	border: 1px solid $blaze-orange
+	border-radius: 4px
+	color: $blaze-orange
+	line-height: 38px
+	font-weight: 600
+	background-color: $white
+	padding: 0 20px
+	display: block
+	text-align: center
+	transition: all linear 0.3s
+	cursor: pointer
+	width: 100%
+	&:hover
+		background-color: $blaze-orange
+		color: #fff
+	&.btn--border-white
+		border: 1px solid $white
+	&.btn--transparent
+		&--white
+			background-color: transparent
+			color: $white
+			&:hover
+				background-color: $white
+				color: $tundora
+		&-gray
+			border-color: rgba(38,38,38,9.15)
+			background-color: transparent
+			color: $oslo-gray
+			&:hover
+				background-color: rgba(38,38,38,9.15)
+				color: $white
+	&.btn--round
+		border-radius: 20px
+	&.btn--inline
+		display: inline-block
+		width: auto
+	&.btn--small
+		height: 30px
+		padding: 0 15px
+		line-height: 28px
+section
+	padding: 30px 0
+.title
+	&-section
+		+rem(24px)
+		font-weight: 600
+		line-height: 1.67
+		margin-bottom: 20px
+.s-lightbg
+	background: $parcelain
+.text
+	line-height: 1.79
+.sandwich 
+	cursor: pointer
+	height: 16px
+	position: relative
+	width: 20px 
+	&--active 
+		.sandwich__line 
+			&--top 
+				top: 7px
+				transform: rotate(45deg)
+			&--middle  
+				opacity: 0 
+			&--bottom 
+				top: 7px
+				transform: rotate(-45deg)
+	&__line 
+		background-color: $white
+		display: block
+		height: 2px
+		left: 0
+		position: absolute
+		transition: all linear .4s
+		width: 100%
+		&--top  
+			top: 0 
+		&--middle
+			  top: 7px 
+		&--bottom
+			  top: 14px 

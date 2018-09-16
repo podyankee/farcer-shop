@@ -1,0 +1,15 @@
+section.s-hits
+	.container
+		h2.title-section Хиты продаж
+		.hits.tabs
+			ul.tabs-navigation.hits-navigation
+				li(show-tab="tab-hits").hits-navigation__item.tabs-navigation__item.tabs-navigation__item--active Хиты продаж
+				li(show-tab="tab-benefits").hits-navigation__item.tabs-navigation__item Вытодно
+				li(show-tab="tab-new").hits-navigation__item.tabs-navigation__item Новинки
+			.tabs__body.hits__body
+				.tab.tab--active.tab-hits 
+					include ../elements/_hits-tab
+				.tab.tab-benefits
+					include ../elements/_benefits-tab
+				.tab.tab-new
+					include ../elements/_new-tab

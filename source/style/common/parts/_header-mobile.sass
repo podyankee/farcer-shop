@@ -1,0 +1,24 @@
+.mobile-nav
+	&__header
+		display: flex
+		align-items: center
+		background-color: $blaze-orange
+		color: $white
+		justify-content: center
+		height: 50px
+		cursor: pointer
+		& > *
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+	&__title
+		+rem(16px)
+		font-weight: 600
+.header__mobile
+	position: relative
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		& > *
+			flex: 0 0 48%
+			width: 48%
