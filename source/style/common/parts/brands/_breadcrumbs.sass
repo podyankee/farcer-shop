@@ -1,0 +1,25 @@
+.breadcrumbs
+	padding-top: 30px
+	&__list
+		display: flex
+		align-items: center
+	&__item
+		display: flex
+		align-items: center
+		+rem(12px)
+		&:after
+			content: ''
+			background-color: $alto
+			background: url(../img/arrow-right.svg) center no-repeat
+			display: inline-block
+			+dem(11px,16px)
+			margin: 0 10px
+		&:last-child
+			&:after
+				display: none
+	&__link
+		color: $tundora
+		&:hover
+			text-decoration: underline
+	&__current
+		color: $tundora

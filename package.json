@@ -1,12 +1,12 @@
 {
-  "name": "ivtdn-corse",
+  "name": "farcer-shop-corse",
   "version": "1.0.0",
   "author": "k.kuznetsov",
   "license": "ISC",
   "scripts": {
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/podyankee/ivtdn",
+  "homepage": "https://github.com/podyankee/farcer-shop",
   "devDependencies": {
     "browser-sync": "~2.18.7",
     "del": "^2.2.2",

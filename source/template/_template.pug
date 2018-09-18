@@ -3,7 +3,7 @@ include common/_mixins
 block variables
 
 doctype html
-html
+html(lang="en")
 	head
 		meta(charset="utf-8")
 		title #{title}
@@ -29,6 +29,6 @@ html
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
 
-	body.index-page
+	body(class=pageClass)
 		block content
 		block script

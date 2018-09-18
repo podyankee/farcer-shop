@@ -1,0 +1,32 @@
+.products-line-slider
+	&__navigation
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__btn
+		+square(40px)
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 1px solid $alto
+		border-fit: 2px
+	&__icon
+		+square(15px)
+		fill: $blaze-orange
+	&__dot
+		+square(10px)
+		border-radius: 50%
+		background-color: $alto
+		cursor: pointer
+		display: block
+	&__dots
+		.slick-dots
+			display: flex
+			align-items: center
+			li
+				margin-right: 10px
+				&:last-child
+					margin-right: 0
+				&.slick-active
+					.products-line-slider__dot
+							background-color: $blaze-orange

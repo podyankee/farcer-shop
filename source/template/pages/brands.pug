@@ -1,0 +1,20 @@
+extends ../_template
+
+block variables
+	- var title = 'Бренды'
+	- var pageClass = 'Brands'
+
+block content
+	//include ../elements/_debug
+	include ../common/_header
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href="index.html").breadcrumbs__link Главная
+				li.breadcrumbs__item
+					span.breadcrumbs__current Бренды
+	include ../common/brands/_section-brands
+	
+		
+	

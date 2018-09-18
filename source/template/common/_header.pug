@@ -20,18 +20,22 @@ header.header
 	.header__main
 		.container
 			.header__content
-				.header__logo.logo
-					img(src="assets/img/general/logo.png", alt="Логотип").logo-img
+				if(pageClass === "index-page")
+					.header__logo.logo
+						img(src="assets/img/general/logo.png", alt="Логотип").logo-img
+				else
+					a(href="index.html").header__logo.logo
+						img(src="assets/img/general/logo.png", alt="Логотип").logo-img
 				.header__phones
 					.header__item.header__item--mobile
 						a(href="tel:8800880880").header__phone 8 (800) 880880
 						a(href="#").header__link Заказать звоннок
 					.header__item.header__item--mobile-hide
 						a(href="tel:8800770770").header__phone 8 (800) 770770
-						span(href="#").header__description Звоннок бесплатный
+						span.header__description Звоннок бесплатный
 				.header__address.header-address
 					+icon('location', 'header-address__icon')
-					span.header-address__text Лондон, авеню Черчилля, 11 к. 2, павильен 2
+					span.header-address__text Лондон, авеню Черчилля, 11 к. 2, павильон 2
 				.header__shop
 					.header-goods
 						span.header-goods__price 0 &#8372;
@@ -41,4 +45,3 @@ header.header
 						span.header-basket__text Корзина
 	include ../elements/_header-nav
 	include ../elements/_header-mobile
-	

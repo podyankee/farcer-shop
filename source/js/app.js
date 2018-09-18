@@ -53,10 +53,12 @@ $(document).ready(function(){
 			slidesToScroll: 1,
 			dots: true,
 			arrows: false,
+			swipe: false,
+			infinity: false,
 			appendDots: '#' + carouselId + ' .product-prev__colors',
 			customPaging: function  (slider, i) {
-				 let color = $(slider.$slides[i]).data('color');
-				 return '<a class="product-prev__color" style="background-color: ' + color + '  " ></a>';
+				let color = $(slider.$slides[i]).data('color');
+				return '<a class="product-prev__color" style="background-color: ' + color + '  " ></a>';
 			}
 				});
 		});
@@ -65,7 +67,36 @@ $(document).ready(function(){
 	let productLineSlider = function  () {
 		$('.js-products-line-slider').slick({
 			slidesToShow: 4,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 1139,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						infinite: true,
+						dots: true,
+						appendDots: '.products-line-slider__dots',
+						customPaging: function (slider, i) {
+						return '<div class=".products-line-slider__dot"></div>';
+					},
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
 		});
 	};
 
