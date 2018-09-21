@@ -129,6 +129,7 @@
 
 	&__form
 		align-items: center
+		background-color: #fff
 		display: flex
 	&__input
 		background: transparent
@@ -169,6 +170,30 @@
 		cursor: pointer
 		border-radius: 0 4px 4px 0
 		flex: 0 0 auto
+.search
+	&-result
+		&__header
+		margin-bottom: 30px
+		& > *
+			margin: 15px 0
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+		&__request
+			padding: 20px
+			background-color: $athens-gray
+			border-radius: 4px
+			& > *
+				margin: 15px 0
+				&:first-child
+					margin-top: 0
+				&:last-child
+					margin-bottom: 0
+		&__label
+			display: block
+			color: $tundora
+			font-weight: 600
 	
 @import "parts/_header-mobile"
 @import "parts/_line-slider"

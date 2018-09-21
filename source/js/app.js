@@ -44,25 +44,27 @@ $(document).ready(function(){
 		});
 	};
 
-	let productPrevSlider = function () {
-		$('.js-product-prev__slider').each(function (idx) {
-			let carouselId = 'carousel' + idx;
-			this.closest('.product-prev').id = carouselId;
-		$(this).slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: true,
-			arrows: false,
-			swipe: false,
-			infinity: false,
-			appendDots: '#' + carouselId + ' .product-prev__colors',
-			customPaging: function  (slider, i) {
-				let color = $(slider.$slides[i]).data('color');
-				return '<a class="product-prev__color" style="background-color: ' + color + '  " ></a>';
-			}
+
+
+			let productPrevSlider = function () {
+				$('.js-product-prev__slider').each(function (idx) {
+					let carouselId = 'carousel' + idx;
+					this.closest('.product-prev').id = carouselId;
+					$(this).slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						dots: true,
+						arrows: false,
+						swipe: false,
+						infinity: false,
+						appendDots: '#' + carouselId + ' .product-prev__colors',
+						customPaging: function (slider, i) {
+							let color = $(slider.$slides[i]).data('color');
+							return '<a class="product-prev__color" style="background-color: ' + color + '  " ></a>';
+						}
+					});
 				});
-		});
-	};
+			};
 
 	let productLineSlider = function  () {
 		$('.js-products-line-slider').slick({

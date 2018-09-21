@@ -1,0 +1,42 @@
+extends ../_template
+
+block variables
+	- var title = 'Результаты поиска'
+	- var pageClass = 'search-page'
+
+block content
+	//include ../elements/_debug
+	include ../common/_header
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href="index.html").breadcrumbs__link Главная
+				li.breadcrumbs__item
+					span.breadcrumbs__current Поиск
+	section.s-search
+		.container
+			h1.title-page #{title}
+			.search-result
+				.search-result__header
+					.search-result__request
+						span.search-result__label По запросу:
+						form.search__form
+							.search__input-wrapper
+								input(placeholder="Я хочу купить...").search__input
+								.search__clear
+									+icon('close', 'search__clear-icon')
+							input(type="submit" value="Найти").search__btn
+					span.search-result__label Найдено 35 товаров
+				.search-result__body
+					.product-prev__wrapper
+						include ../elements/_prev-1
+						include ../elements/_prev-2
+						include ../elements/_prev-3
+						include ../elements/_prev-4
+						include ../elements/_prev-1
+						include ../elements/_prev-2
+						include ../elements/_prev-3
+						include ../elements/_prev-4
+
+			
