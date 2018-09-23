@@ -76,8 +76,8 @@ $(document).ready(function(){
 					settings: {
 						slidesToShow: 3,
 						slidesToScroll: 1,
-						infinite: true,
-						dots: true,
+						infinite: false,
+			
 						appendDots: '.products-line-slider__dots',
 						customPaging: function (slider, i) {
 						return '<div class=".products-line-slider__dot"></div>';
@@ -101,6 +101,19 @@ $(document).ready(function(){
 			]
 		});
 	};
+	let productBorderLineSlider = function  () {
+		$('.js-products-border-line-slider').each(function (idx) {
+			let productsBorderLineSliderID = "products-border-line-slider-" + idx;
+			this.closest('.products-border-line-slider').id = productsBorderLineSliderID;
+			$(this).slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				infinite: false,
+				prevArrow: '#' + productsBorderLineSliderID + ' .products-border-line-slider__btn--prev',
+				nextArrow: '#' + productsBorderLineSliderID + ' .products-border-line-slider__btn--next'
+			});
+		});
+	};
 
 	openSearchForm();
 	clearSearchForm();
@@ -108,9 +121,9 @@ $(document).ready(function(){
 	tabs();
 	productPrevSlider();
 	productLineSlider();
+	productBorderLineSlider();
 });
 
 
 
     });
-    
