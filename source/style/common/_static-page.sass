@@ -1,0 +1,43 @@
+.title
+	&-small
+		+rem(16px)
+		font-weight: 700
+		line-height: 1.25
+		margin-bottom: 20px
+.s-static-page
+	& + .s-advantages
+		padding-top: 0
+.content-block
+	&__row
+		display: flex
+		& > *
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+		.brand__certificate-img
+			max-height: 370px
+			max-width: 255px
+	&__col
+		flex: 1
+	ul, li
+		margin: 0
+		padding: 0
+	ul
+		margin: 30px 0
+		&.no-dots
+			li
+				padding-left: 0
+				&:after
+					display: none
+	li
+		line-height: 1.79
+		padding-left: 35px
+		position: relative
+		&:before
+			content: ''
+			left: 10px
+			position: absolute
+			top: 10px
+			border-radius: 5px
+			+square(4px)
+			background-color: $tundora

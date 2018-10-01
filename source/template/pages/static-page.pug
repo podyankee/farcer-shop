@@ -1,0 +1,30 @@
+extends ../_template
+
+block variables
+	- var title = 'Статическая страница'
+	- var pageClass = 'ctatic-page'
+
+block content
+	//include ../elements/_debug
+	include ../common/_header
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href="index.html").breadcrumbs__link Главная
+				li.breadcrumbs__item
+					span.breadcrumbs__current О компании
+	include ../common/_s-static-page
+	include ../common/_advantages
+	include ../common/_footer
+	
+	
+		
+	
+
+
+
+
+	
+		
+	
