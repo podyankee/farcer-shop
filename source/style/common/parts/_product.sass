@@ -78,6 +78,18 @@
 		min-width: 20%
 		&:nth-child(4n+4)
 			margin-right: 0
+	&.product-prev__wrapper--small
+		& > *
+			min-width: 30%
+			max-width: calc(34% - 30px)
+		&:nth-child(4n+4)
+			margin-right: 30px
+		&:nth-child(3n+3)
+			margin-right: 0
+		.product-prev
+			margin-right: 10px
+			box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1), 0 10px 20px 0 rgba(0,0,0,0.05)
+
 .product-prev-img__wrapper
 	max-width: 100%
 	display: inline-block

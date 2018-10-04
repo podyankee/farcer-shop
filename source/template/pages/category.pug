@@ -1,0 +1,21 @@
+extends ../_template
+
+block variables
+	- var title = 'Беговелы'
+	- var pageClass = 'category-page'
+
+block content
+	//include ../elements/_debug
+	include ../common/_header
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href="index.html").breadcrumbs__link Главная
+				li.breadcrumbs__item
+					a(href="index.html").breadcrumbs__link Каталог
+				li.breadcrumbs__item
+					span.breadcrumbs__current Беговелы
+	include ../common/_s-category-slider
+	include ../common/_s-category-aside
+	include ../common/_footer

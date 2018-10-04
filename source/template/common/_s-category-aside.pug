@@ -1,0 +1,38 @@
+.category
+	.container
+		.category__header
+			h1.title-page Беговелы 
+		.category__body
+			aside.category-filter
+			main.category-main
+				secton.s-category-main
+					.product-prev__wrapper.product-prev__wrapper--small
+						include ../elements/_prev-1
+						include ../elements/_prev-2
+						include ../elements/_prev-3
+						include ../elements/_prev-4
+						include ../elements/_prev-1
+						include ../elements/_prev-2
+						include ../elements/_prev-3
+						include ../elements/_prev-4
+					.pagination__wrapper
+						.pagination
+							a(href="#").pagination__btn
+								span.arrow-left.pagination-icon
+							ul.pagination__list
+								each i in [1,2,3,4,5]
+									if(i===1)
+										li.pagination__item.pagination__item--active
+											a(href="#").pagination__link=i
+									else
+										li.pagination__item
+											a(href="#").pagination__link=i
+							a(href="#").pagination__btn
+								span.arrow-right.pagination-icon
+						.pagination__count
+							span.pagination__text Выводить по
+							.select
+								.select__header
+									span.select__current 12
+									.arrow-down.select__icon
+				include _s-content

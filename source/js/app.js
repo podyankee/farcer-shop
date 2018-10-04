@@ -115,6 +115,13 @@ $(document).ready(function(){
 		});
 	};
 
+	let categorySlider = function () {
+		$('.js-category-slider').slick({
+			slidesToShow: 6,
+			arrow: false
+		});
+	};
+
 	openSearchForm();
 	clearSearchForm();
 	bannerSlider();
@@ -122,6 +129,7 @@ $(document).ready(function(){
 	productPrevSlider();
 	productLineSlider();
 	productBorderLineSlider();
+	categorySlider();
 });
 
 

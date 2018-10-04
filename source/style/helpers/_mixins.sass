@@ -1,44 +1,44 @@
 @mixin centered($axis: 'both')
-    position: absolute
-    @if $axis == 'both'
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-    @if $axis == 'x'
-        left: 50%
-        transform: translateX(-50%)
-    @if $axis == 'y'
-        top: 50%
-        transform: translateY(-50%)
+		position: absolute
+		@if $axis == 'both'
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+		@if $axis == 'x'
+				left: 50%
+				transform: translateX(-50%)
+		@if $axis == 'y'
+				top: 50%
+				transform: translateY(-50%)
 
 @mixin dem($a,$b)
 	width: $a
 	height: $b
 
 @mixin square($size)
-    +dem($size, $size)
+		+dem($size, $size)
 
 @function calculateRem($size) 
-    $remSize: $size / 16px
-    @return $remSize * 1rem
+		$remSize: $size / 16px
+		@return $remSize * 1rem
 
 
 @mixin rem($size) 
-    font-size: $size;
-    font-size: calculateRem($size)
+		font-size: $size
+		font-size: calculateRem($size)
 
 @mixin absolute-center()
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
 
 @mixin absolute-all($num)
 		position: absolute
-    top: $num
-    bottom: $num
-    right: $num
-    left: $num
+		top: $num
+		bottom: $num
+		right: $num
+		left: $num
 
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
 	@font-face
@@ -52,10 +52,51 @@
 		@else
 			src: url('#{$file-path}.eot')
 			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
-        
+				
 @mixin img-responsive
 		display: block
 		max-width: 100%
 		height: auto
 @mixin img-width
 		width: 100%
+
+@mixin triangle($direction, $sizeH, $sizeV, $color)
+	content: ''
+	display: block
+	width: 0
+	height: 0
+	border-style: solid
+	-moz-transform: scale(.9999)
+			
+	@if $direction == top 
+		border-width: 0 $sizeV $sizeH $sizeV
+		border-color: transparent transparent $color transparent
+	
+	@if $direction == bottom
+		border-width: $sizeV $sizeH 0 $sizeV
+		border-color: $color transparent transparent transparent
+	
+	@if $direction == left
+		border-width: $sizeV $sizeH $sizeV 0
+		border-color: transparent $color transparent transparent
+	
+	@if $direction == right
+		border-width: $sizeV 0 $sizeV $sizeH
+		border-color: transparent transparent transparent $color
+	
+	@if $direction == topright
+		border-width: 0 $sizeH $sizeV 0
+		border-color: transparent $color transparent transparent
+	
+	@if $direction == bottomright
+		border-width: 0 0 $sizeH $sizeV
+		border-color: transparent transparent $color transparent
+	
+	@if $direction == bottomleft
+		border-width: $sizeH 0 0 $sizeV
+		border-color: transparent transparent transparent $color
+	
+	@if $direction == topleft
+		border-width: $sizeH $sizeV 0 0
+		border-color: $color transparent transparent transparent
+	
