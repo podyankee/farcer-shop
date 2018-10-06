@@ -263,10 +263,91 @@
     <div class="category">
       <div class="container">
         <div class="category__header">
-          <h1 class="title-page">Беговелы </h1>
+          <h1 class="title-page">Беговелы</h1>
+          <div class="category__sort"><span class="pagination__text">Выводить по</span>
+            <div class="select">
+              <div class="select__header"><span class="select__current">12</span>
+                <div class="arrow-down select__icon"></div>
+              </div>
+              <div class="select__body">
+                <ul class="select-list">
+                  <li class="select-list__item">24</li>
+                  <li class="select-list__item">36</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="category__body">
-          <aside class="category-filter"></aside>
+          <aside class="filter category__filter">
+            <div class="filter__block"><span class="filter__title">Подкатегории</span>
+              <ul class="filter-list">
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы для детей от 2 лет</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы для детей от 3 лет</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы Micro</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы Puky</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы Kokua</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы Hudora</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы Strider</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы Scool</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="#">Беговелы Globber</a></li>
+              </ul>
+            </div>
+            <div class="filter__block"><span class="filter__title">Подбор параметров</span>
+              <div class="filter__row">
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Пол</span><span class="arrow-down select-icon"></span></div>
+                  <div class="select__body">
+                    <ul class="select-list">
+                      <li class="select-list__item">Мужской</li>
+                      <li class="select-list__item">Женский</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Дополнительные свойства</span><span class="arrow-down select-icon"></span></div>
+                  <div class="select__body">
+                    <ul class="select-list">
+                      <li class="select-list__item">Все</li>
+                      <li class="select-list__item">Легкие</li>
+                      <li class="select-list__item">С подножкой</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Возрастная группа</span><span class="arrow-down select-icon"></span></div>
+                  <div class="select__body">
+                    <ul class="select-list">
+                      <li class="select-list__item">Все</li>
+                      <li class="select-list__item">Лошкольная(3-7 лет)</li>
+                      <li class="select-list__item">Ясельная(до 3-х лет)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__row">
+                <div class="filter-color"><span class="filter__label">Цвет</span>
+                  <ul class="filter-color__list">
+                    <li class="filter-color__item" style="background-color:#000000"></li>
+                    <li class="filter-color__item" style="background-color:#666666"></li>
+                    <li class="filter-color__item filter-color__item--white" style="background-color:#ffffff"></li>
+                    <li class="filter-color__item" style="background-color:#f4d6ff"></li>
+                    <li class="filter-color__item" style="background-color:#3333ff"></li>
+                    <li class="filter-color__item" style="background-color:#666666"></li>
+                    <li class="filter-color__item" style="background-color:#ffd701"></li>
+                    <li class="filter-color__item" style="background-color:#009900"></li>
+                    <li class="filter-color__item" style="background-color:#99ff9a"></li>
+                    <li class="filter-color__item" style="background-color:#30d5c8"></li>
+                    <li class="filter-color__item" style="background-color:#103090"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter__buttons">
+                <button class="btn btn--contour-gray">Сброс</button>
+                <button class="btn btn--bg-orange">Подбор</button>
+              </div>
+            </div>
+          </aside>
           <main class="category-main">
             <secton class="s-category-main">
               <div class="product-prev__wrapper product-prev__wrapper--small">
@@ -434,13 +515,6 @@
                     <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
                     <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
                   </ul><a class="pagination__btn" href="#"><span class="arrow-right pagination-icon"></span></a>
-                </div>
-                <div class="pagination__count"><span class="pagination__text">Выводить по</span>
-                  <div class="select">
-                    <div class="select__header"><span class="select__current">12</span>
-                      <div class="arrow-down select__icon"></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </secton>
