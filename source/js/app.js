@@ -122,6 +122,17 @@ $(document).ready(function(){
 		});
 	};
 
+	let select = function  () {
+		$(document).on('click', '.select__header',function  () {
+			$(this).parent().toggleClass('select--open').siblings('.filter__row').find('.select').removeClass('select--open');;
+		});
+		$(document).on('click', '.select-list__item',function  () {
+			let current = $(this).closest('.select').find('select__current')[0];
+			$(this).closest('.select').removeClass('select--open');
+			$(current).text($(this).text());
+		});
+	};
+
 	openSearchForm();
 	clearSearchForm();
 	bannerSlider();
@@ -130,6 +141,7 @@ $(document).ready(function(){
 	productLineSlider();
 	productBorderLineSlider();
 	categorySlider();
+	select();
 });
 
 

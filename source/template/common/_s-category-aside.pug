@@ -1,9 +1,66 @@
 .category
 	.container
 		.category__header
-			h1.title-page Беговелы 
+			h1.title-page Беговелы
+			.category__sort
+				span.pagination__text Выводить по
+				.select
+					.select__header
+						span.select__current 12
+						.arrow-down.select__icon
+					.select__body
+						ul.select-list
+							li.select-list__item 24
+							li.select-list__item 36
 		.category__body
-			aside.category-filter
+			aside.filter.category__filter
+				.filter__block
+					span.filter__title Подкатегории
+					ul.filter-list
+						each link in ['Беговелы для детей от 2 лет', 'Беговелы для детей от 3 лет', 'Беговелы Micro', 'Беговелы Puky', 'Беговелы Kokua', 'Беговелы Hudora', 'Беговелы Strider', 'Беговелы Scool', 'Беговелы Globber']
+							li.filter-list__item
+								a(href="#").filter-list__link=link
+				.filter__block
+					span.filter__title Подбор параметров
+					.filter__row
+						.select
+							.select__header
+								span.select__current Пол
+								span.arrow-down.select-icon
+							.select__body
+								ul.select-list
+									li.select-list__item Мужской
+									li.select-list__item Женский
+						.select
+							.select__header
+								span.select__current Дополнительные свойства
+								span.arrow-down.select-icon
+							.select__body
+								ul.select-list
+									li.select-list__item Все
+									li.select-list__item Легкие
+									li.select-list__item С подножкой
+						.select
+							.select__header
+								span.select__current Возрастная группа
+								span.arrow-down.select-icon
+							.select__body
+								ul.select-list
+									li.select-list__item Все
+									li.select-list__item Лошкольная(3-7 лет)
+									li.select-list__item Ясельная(до 3-х лет)
+					.filter__row
+						.filter-color
+							span.filter__label Цвет
+							ul.filter-color__list
+								each color in ['000000','666666','ffffff','f4d6ff','3333ff','666666','ffd701','009900','99ff9a','30d5c8','103090']
+									if(color === 'ffffff')
+										li.filter-color__item.filter-color__item--white(style=`background-color:#${color}`)
+									else
+										li.filter-color__item(style=`background-color:#${color}`)
+					.filter__buttons
+						button.btn.btn--contour-gray Сброс
+						button.btn.btn--bg-orange Подбор
 			main.category-main
 				secton.s-category-main
 					.product-prev__wrapper.product-prev__wrapper--small
@@ -29,10 +86,5 @@
 											a(href="#").pagination__link=i
 							a(href="#").pagination__btn
 								span.arrow-right.pagination-icon
-						.pagination__count
-							span.pagination__text Выводить по
-							.select
-								.select__header
-									span.select__current 12
-									.arrow-down.select__icon
+
 				include _s-content
